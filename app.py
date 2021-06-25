@@ -1,3 +1,5 @@
+# Got help with global variables here: https://stackoverflow.com/questions/19182963/global-variable-and-python-flask
+
 """Allows users to take a satisfaction survey and stores their responses for later use."""
 from surveys import Question, Survey, satisfaction_survey
 from flask import Flask, request, render_template, redirect, flash
