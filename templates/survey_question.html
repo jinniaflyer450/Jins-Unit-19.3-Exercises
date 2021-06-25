@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-{% block title %}Satisfaction Survey: Question {{question_number}} {% endblock %}
+{% block title %}Satisfaction Survey: Question {{question_number + 1}} {% endblock %}
 {% block content %}
-<h1>Question {{question_number}}/{{max_question_number}}</h1>
+{% for msg in get_flashed_messages() %}
+<p>{{msg}}</p>
+{% endfor %}
+<h1>Question {{question_number + 1}}/{{max_question_number}}</h1>
 <form method='POST' action='/answer'>
     <p>{{survey_question}}</p>
     {% for option in options_and_indices %}
