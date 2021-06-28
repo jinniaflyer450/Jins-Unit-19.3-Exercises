@@ -7,7 +7,7 @@
 <h1>Thank you!</h1>
 <p>Thank you for taking our survey!</p>
 <p>Your responses:</p>
-{% for answer in responses %}
+{% for answer in session['responses'] %}
 <p>{{answer}}</p>
 {% endfor %}
 {% endblock %}
